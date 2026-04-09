@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggie Bermudez - Personal Trainer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <span class="header-item"><i class="fas fa-envelope"></i> bermudezmag@comcast.net</span>
+            <span class="header-item"><i class="fas fa-phone"></i> 555-5555#</span>
+        </div>
+        <div class="header-right">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="mailto:Bermudezmag@comcast.com" class="nav-email">Maggie Bermudez</a>
+                <div class="logo">
+                    <img src="assets/images/Logo.png" alt="Maggie Bermudez Fitness Logo" class="brand-logo">
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#pages">PAGES</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#shop">SHOP</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Full Screen Carousel -->
+    <section class="hero">
+        <div class="image-carousel-full">
+            <div class="carousel-wrapper-full">
+                <img src="assets/images/Maggie1.jpg" alt="Maggie Bermudez - Personal Trainer" class="carousel-image">
+                <img src="assets/images/Maggie2.jpg" alt="Maggie Bermudez - Fitness Training" class="carousel-image">
+                <img src="assets/images/Maggie3.jpg" alt="Maggie Bermudez - Gym" class="carousel-image">
+                
+                <!-- Overlay Content -->
+                <div class="carousel-overlay">
+                    <div class="hero-content">
+                        <h2 class="hero-subtitle">FITNESS WITH TRAINER</h2>
+                        <h1 class="hero-title">MAGGIE BERMUDEZ</h1>
+                        <p class="hero-description">
+                            Hello! I'm personal trainer with over six years of experience. That brings dedication, resilience, and a contagious passion for fitness and well-being that inspires everyone she works with.
+                        </p>
+                        <button class="read-more-btn">READ MORE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modern Carousel Controls -->
+            <div class="carousel-controls-modern">
+                <button class="carousel-control-btn prev" onclick="scrollCarousel(-1)" title="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="carousel-control-btn play-pause" id="playPauseBtn" onclick="toggleAutoScroll()" title="Play/Pause">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" id="pauseIcon">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" id="playIcon" style="display: none;">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </button>
+                <button class="carousel-control-btn next" onclick="scrollCarousel(1)" title="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <iframe
+        id="soundcloudPlayer"
+        title="Background Music"
+        width="1"
+        height="1"
+        allow="autoplay"
+        style="position: absolute; left: -9999px; border: 0;"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jon-secada/just-another-day-1&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+    </iframe>
+
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
