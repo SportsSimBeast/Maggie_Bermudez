@@ -116,3 +116,33 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     setupSoundCloudAutoplay();
 });
+
+/* ===== Contact Modal Functions ===== */
+function openContactModal(event) {
+    event.preventDefault();
+    const modal = document.getElementById('contactModal');
+    modal.style.display = 'flex';
+}
+
+function closeContactModal() {
+    const modal = document.getElementById('contactModal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        closeContactModal();
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('contactModal');
+        if (modal.style.display === 'flex') {
+            closeContactModal();
+        }
+    }
+});

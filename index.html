@@ -12,15 +12,17 @@
     <!-- Top Header -->
     <header class="top-header">
         <div class="header-left">
-            <span class="header-item"><i class="fas fa-envelope"></i> bermudezmag@comcast.net</span>
-            <span class="header-item"><i class="fas fa-phone"></i> 555-5555#</span>
+            <a class="header-item" href="mailto:bermudezmag@comcast.net?subject=I%27m%20interested%20in%20training%20with%20you" style="text-decoration:none; color:inherit;">
+                <i class="fas fa-envelope"></i> bermudezmag@comcast.net
+            </a>
+            <span class="header-item"><i class="fas fa-phone"></i></span>
         </div>
         <div class="header-right">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/maggiesteve.bermudez" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/MaggieBermudez4" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/maggie.a.bermudez" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@curvyfitlatina" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/pub/dir/Maggie/Bermudez" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </header>
 
@@ -35,11 +37,11 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">HOME</a></li>
-                <li><a href="#pages">PAGES</a></li>
-                <li><a href="#gallery">GALLERY</a></li>
-                <li><a href="#blog">BLOG</a></li>
-                <li><a href="#shop">SHOP</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="pages.html">PAGES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="https://lowerbuckstimes.com/2024/01/16/feasterville-woman-becomes-pro-football-player-at-age-43/" target="_blank" rel="noopener noreferrer">BLOG</a></li>
+                <li><a href="https://phlinsurance.com/" target="_blank" rel="noopener noreferrer">SHOP</a></li>
+                <li><a href="#" onclick="openContactModal(event)">CONTACT</a></li>
             </ul>
         </div>
     </nav>
@@ -60,7 +62,7 @@
                         <p class="hero-description">
                             Hello! I'm personal trainer with over six years of experience. That brings dedication, resilience, and a contagious passion for fitness and well-being that inspires everyone she works with.
                         </p>
-                        <button class="read-more-btn">READ MORE</button>
+                        <a href="pages.html" class="read-more-btn">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -99,6 +101,24 @@
         style="position: absolute; left: -9999px; border: 0;"
         src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jon-secada/just-another-day-1&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
     </iframe>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="contact-modal-close" onclick="closeContactModal()">&times;</span>
+            <div class="contact-modal-header">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-modal-body">
+                <p class="contact-email">
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:bermudezmag@comcast.net">bermudezmag@comcast.net</a>
+                </p>
+                <p class="contact-message">Please reach out to me on social media</p>
+                <p class="contact-thank-you">THANK YOU!</p>
+            </div>
+        </div>
+    </div>
 
     <script src="https://w.soundcloud.com/player/api.js"></script>
     <script src="script.js"></script>
