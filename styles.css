@@ -36,6 +36,12 @@ body {
     color: #CC0000;
 }
 
+.header-phone {
+    display: none;
+    text-decoration: none;
+    color: inherit;
+}
+
 .header-right {
     display: flex;
     gap: 15px;
@@ -335,6 +341,18 @@ body {
         gap: 10px;
         justify-content: center;
         align-items: center;
+    }
+
+    .header-phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .header-phone:hover {
+        color: #CC0000;
     }
 
     .navbar {
@@ -966,6 +984,33 @@ body {
     text-decoration: underline;
 }
 
+.contact-phone {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-phone i {
+    color: #CC0000;
+    font-size: 20px;
+}
+
+.contact-phone a {
+    color: #CC0000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-phone a:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
 .contact-message {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -1058,5 +1103,275 @@ body {
     .contact-thank-you {
         font-size: 20px;
         margin-top: 25px;
+    }
+}
+
+/* ===== Services Page ===== */
+.services-nav-tabs {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ebd4d4 100%);
+    padding: 30px 20px;
+    gap: 20px;
+    border-bottom: 3px solid #CC0000;
+    flex-wrap: wrap;
+}
+
+.services-tab-btn {
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.services-tab-btn i {
+    font-size: 16px;
+}
+
+.services-tab-btn:hover {
+    border-color: #CC0000;
+    color: #CC0000;
+}
+
+.services-tab-btn.active {
+    background: #CC0000;
+    color: white;
+    border-color: #CC0000;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
+}
+
+.service-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.service-section.active {
+    display: block;
+}
+
+.service-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.service-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.service-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.service-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+.service-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.service-features {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.service-features li {
+    font-size: 16px;
+    color: #333;
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.service-features li i {
+    position: absolute;
+    left: 0;
+    color: #CC0000;
+    font-size: 18px;
+}
+
+.service-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(204, 0, 0, 0.05) 0%, rgba(204, 0, 0, 0.1) 100%);
+    border-radius: 12px;
+    border: 2px solid #CC0000;
+}
+
+.service-btn {
+    background: #CC0000;
+    color: white;
+    padding: 16px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4);
+}
+
+.service-btn:hover {
+    background: #1a1a1a;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.service-btn i {
+    transition: transform 0.3s ease;
+}
+
+.service-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* ===== Services Responsive ===== */
+@media (max-width: 1024px) {
+    .service-content {
+        padding: 60px 30px;
+    }
+
+    .service-header h1 {
+        font-size: 48px;
+    }
+
+    .service-body {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-cta {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-nav-tabs {
+        padding: 20px 10px;
+        gap: 10px;
+    }
+
+    .services-tab-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .service-content {
+        padding: 50px 20px;
+    }
+
+    .service-header h1 {
+        font-size: 40px;
+    }
+
+    .service-subtitle {
+        font-size: 16px;
+    }
+
+    .service-body {
+        gap: 30px;
+    }
+
+    .service-text p {
+        font-size: 15px;
+    }
+
+    .service-features li {
+        font-size: 15px;
+        padding-left: 28px;
+    }
+
+    .service-cta {
+        text-align: center;
+    }
+
+    .service-btn {
+        padding: 14px 35px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-nav-tabs {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .services-tab-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+    }
+
+    .service-content {
+        padding: 40px 15px;
+    }
+
+    .service-header h1 {
+        font-size: 32px;
+    }
+
+    .service-subtitle {
+        font-size: 14px;
+    }
+
+    .service-text p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .service-features li {
+        font-size: 14px;
+    }
+
+    .service-cta {
+        padding: 25px 15px;
+    }
+
+    .service-btn {
+        padding: 12px 30px;
+        font-size: 11px;
     }
 }

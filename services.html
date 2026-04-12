@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Maggie Bermudez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <a class="header-item" href="mailto:bermudezmag@comcast.net?subject=I%27m%20interested%20in%20training%20with%20you" style="text-decoration:none; color:inherit;">
+                <i class="fas fa-envelope"></i> bermudezmag@comcast.net
+            </a>
+            <a class="header-item header-phone" href="tel:267-574-4163"><i class="fas fa-phone"></i> 267-574-4163</a>
+        </div>
+        <div class="header-right">
+            <a href="https://www.facebook.com/maggiesteve.bermudez" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/MaggieBermudez4" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/maggie.a.bermudez" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@curvyfitlatina" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/pub/dir/Maggie/Bermudez" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-email">Maggie Bermudez</a>
+                <div class="logo">
+                    <img src="assets/images/Logo.png" alt="Maggie Bermudez Fitness Logo" class="brand-logo">
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="services.html#training" class="active">TRAINING</a></li>
+                <li><a href="services.html#peptides">PEPTIDES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="#" onclick="openContactModal(event)">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Navigation Tabs -->
+    <div class="services-nav-tabs">
+        <a href="#training" class="services-tab-btn active" onclick="switchService(event, 'training')">
+            <i class="fas fa-dumbbell"></i> TRAINING
+        </a>
+        <a href="#peptides" class="services-tab-btn" onclick="switchService(event, 'peptides')">
+            <i class="fas fa-flask"></i> PEPTIDES
+        </a>
+    </div>
+
+    <!-- Training Section -->
+    <section id="training" class="service-section active">
+        <div class="service-content">
+            <div class="service-header">
+                <h1>Personal Training</h1>
+                <p class="service-subtitle">Transform Your Fitness Journey</p>
+            </div>
+            <div class="service-body">
+                <div class="service-text">
+                    <p>
+                        Discover personalized fitness training tailored to your goals. With years of experience and a proven track record of success, I'm committed to helping you achieve the results you deserve through dedicated, professional training programs.
+                    </p>
+                    <p>
+                        Whether you're just starting your fitness journey or looking to take your training to the next level, my comprehensive personal training programs are designed to meet you where you are and take you where you want to be.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Customized Training Programs</li>
+                        <li><i class="fas fa-check"></i> One-on-One Coaching</li>
+                        <li><i class="fas fa-check"></i> Goal-Oriented Results</li>
+                        <li><i class="fas fa-check"></i> Professional Guidance</li>
+                    </ul>
+                </div>
+                <div class="service-cta">
+                    <a href="https://www.bridgeathletic.com/personal-trainer" target="_blank" class="service-btn">
+                        Learn More & Book Session
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Peptides Section -->
+    <section id="peptides" class="service-section">
+        <div class="service-content">
+            <div class="service-header">
+                <h1>Peptides & Weight Loss Programs</h1>
+                <p class="service-subtitle">Optimize Your Health & Wellness</p>
+            </div>
+            <div class="service-body">
+                <div class="service-text">
+                    <p>
+                        Explore advanced peptide therapy and comprehensive weight loss programs designed to support your health goals. These cutting-edge treatments can help enhance metabolism, support recovery, and accelerate your wellness journey.
+                    </p>
+                    <p>
+                        Our specialized weight loss programs combine evidence-based approaches with personalized coaching to help you achieve sustainable results and maintain a healthier lifestyle.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Peptide Therapy</li>
+                        <li><i class="fas fa-check"></i> Weight Loss Programs</li>
+                        <li><i class="fas fa-check"></i> Personalized Wellness Plans</li>
+                        <li><i class="fas fa-check"></i> Professional Support</li>
+                    </ul>
+                </div>
+                <div class="service-cta">
+                    <a href="https://thewellnewtown.com/treatments/weight-loss-program-in-newtown-pa/" target="_blank" class="service-btn">
+                        Explore Peptide Programs
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="contact-modal-close" onclick="closeContactModal()">&times;</span>
+            <div class="contact-modal-header">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-modal-body">
+                <p class="contact-email">
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:bermudezmag@comcast.net">bermudezmag@comcast.net</a>
+                </p>
+                <p class="contact-phone">
+                    <i class="fas fa-phone"></i> 
+                    <a href="tel:267-574-4163">267-574-4163</a>
+                </p>
+                <p class="contact-message">Please reach out to me on social media</p>
+                <p class="contact-thank-you">THANK YOU!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Switch between service sections
+        function switchService(event, serviceId) {
+            event.preventDefault();
+            
+            // Hide all service sections
+            const sections = document.querySelectorAll('.service-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.services-tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(serviceId).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.closest('.services-tab-btn').classList.add('active');
+        }
+
+        // Handle hash navigation - show only selected section
+        function handleHashNavigation() {
+            const hash = window.location.hash.substr(1);
+            
+            // Hide all sections first
+            const sections = document.querySelectorAll('.service-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.services-tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show the section matching the hash
+            if (hash === 'training' || hash === 'peptides') {
+                const section = document.getElementById(hash);
+                if (section) {
+                    section.classList.add('active');
+                    // Mark the corresponding tab as active
+                    const tab = document.querySelector(`a[href="#${hash}"]`);
+                    if (tab) {
+                        tab.classList.add('active');
+                    }
+                }
+            } else {
+                // Default to training if no hash
+                document.getElementById('training').classList.add('active');
+                document.querySelector('a[href="#training"]').classList.add('active');
+            }
+        }
+
+        window.addEventListener('load', handleHashNavigation);
+        window.addEventListener('hashchange', handleHashNavigation);
+    </script>
+</body>
+</html>
