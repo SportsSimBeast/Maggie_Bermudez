@@ -37,8 +37,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="services.html#training" class="active">TRAINING</a></li>
+                <li><a href="services.html#training">TRAINING</a></li>
                 <li><a href="services.html#peptides">PEPTIDES</a></li>
+                <li><a href="services.html#recovery">RECOVERY</a></li>
                 <li><a href="gallery.html">GALLERY</a></li>
                 <li><a href="#" onclick="openContactModal(event)">CONTACT</a></li>
             </ul>
@@ -52,6 +53,9 @@
         </a>
         <a href="#peptides" class="services-tab-btn" onclick="switchService(event, 'peptides')">
             <i class="fas fa-flask"></i> PEPTIDES
+        </a>
+        <a href="#recovery" class="services-tab-btn" onclick="switchService(event, 'recovery')">
+            <i class="fas fa-spa"></i> RECOVERY
         </a>
     </div>
 
@@ -119,6 +123,38 @@
         </div>
     </section>
 
+    <!-- Recovery Section -->
+    <section id="recovery" class="service-section">
+        <div class="service-content">
+            <div class="service-header">
+                <h1>Stretch & Recovery Programs</h1>
+                <p class="service-subtitle">Enhance Flexibility & Performance Recovery</p>
+            </div>
+            <div class="service-body">
+                <div class="service-text">
+                    <p>
+                        Discover specialized stretch and recovery programs designed to improve flexibility, reduce muscle tension, and accelerate post-workout recovery. These therapeutic techniques help optimize your physical performance and overall wellness.
+                    </p>
+                    <p>
+                        Our comprehensive recovery services combine advanced stretching techniques with professional guidance to help you improve mobility, prevent injuries, and maintain peak performance in all your activities.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Professional Stretching Programs</li>
+                        <li><i class="fas fa-check"></i> Recovery Optimization</li>
+                        <li><i class="fas fa-check"></i> Mobility Enhancement</li>
+                        <li><i class="fas fa-check"></i> Injury Prevention</li>
+                    </ul>
+                </div>
+                <div class="service-cta">
+                    <a href="https://newtownathletic.com/stretch-recovery/" target="_blank" class="service-btn">
+                        Explore Recovery Services
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Modal -->
     <div id="contactModal" class="contact-modal">
         <div class="contact-modal-content">
@@ -175,7 +211,7 @@
             tabs.forEach(tab => tab.classList.remove('active'));
             
             // Show the section matching the hash
-            if (hash === 'training' || hash === 'peptides') {
+            if (hash === 'training' || hash === 'peptides' || hash === 'recovery') {
                 const section = document.getElementById(hash);
                 if (section) {
                     section.classList.add('active');
